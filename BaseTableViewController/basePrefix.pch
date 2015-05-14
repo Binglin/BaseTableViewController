@@ -1,0 +1,14 @@
+//
+//  basePrefix.pch
+//  BaseTableViewController
+//
+//  Created by Zhenglinqin on 15/5/14.
+//  Copyright (c) 2015年 Binglin. All rights reserved.
+//
+
+#ifndef BaseTableViewController_basePrefix_pch
+#define BaseTableViewController_basePrefix_pch
+
+#import "UIView+Ext.h"
+
+#endif

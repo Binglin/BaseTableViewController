@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		563054271B04B055006D4B71 /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 563054261B04B055006D4B71 /* UIView+Ext.m */; };
 		56AC07111B0351AA0008268B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC07101B0351AA0008268B /* main.m */; };
 		56AC07141B0351AA0008268B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC07131B0351AA0008268B /* AppDelegate.m */; };
 		56AC07171B0351AA0008268B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC07161B0351AA0008268B /* ViewController.m */; };
@@ -30,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		563054251B04B055006D4B71 /* UIView+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ext.h"; sourceTree = "<group>"; };
+		563054261B04B055006D4B71 /* UIView+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ext.m"; sourceTree = "<group>"; };
+		563054281B04B0D8006D4B71 /* basePrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basePrefix.pch; sourceTree = "<group>"; };
 		56AC070B1B0351AA0008268B /* BaseTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AC070F1B0351AA0008268B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56AC07101B0351AA0008268B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -69,6 +73,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		563054291B04B0F5006D4B71 /* viewExt */ = {
+			isa = PBXGroup;
+			children = (
+				563054251B04B055006D4B71 /* UIView+Ext.h */,
+				563054261B04B055006D4B71 /* UIView+Ext.m */,
+			);
+			name = viewExt;
+			sourceTree = "<group>";
+		};
 		56AC07021B0351AA0008268B = {
 			isa = PBXGroup;
 			children = (
@@ -96,14 +109,8 @@
 				56AC07161B0351AA0008268B /* ViewController.m */,
 				56AC073A1B035B1C0008268B /* TestTableViewCell.h */,
 				56AC073B1B035B1C0008268B /* TestTableViewCell.m */,
-				56AC07401B035C4C0008268B /* New Group2 */,
-				56AC073E1B035C3A0008268B /* New Group */,
 				56AC073D1B035C310008268B /* base */,
-				56AC07341B0351BC0008268B /* BasedTableController.h */,
-				56AC073F1B035C3E0008268B /* New Group1 */,
-				56AC07351B0351BC0008268B /* BasedTableController.m */,
-				56AC07371B03532A0008268B /* BaseTableViewCell.h */,
-				56AC07381B03532A0008268B /* BaseTableViewCell.m */,
+				563054291B04B0F5006D4B71 /* viewExt */,
 				56AC07181B0351AA0008268B /* Main.storyboard */,
 				56AC071B1B0351AA0008268B /* Images.xcassets */,
 				56AC071D1B0351AA0008268B /* LaunchScreen.xib */,
@@ -117,6 +124,7 @@
 			children = (
 				56AC070F1B0351AA0008268B /* Info.plist */,
 				56AC07101B0351AA0008268B /* main.m */,
+				563054281B04B0D8006D4B71 /* basePrefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -141,29 +149,12 @@
 		56AC073D1B035C310008268B /* base */ = {
 			isa = PBXGroup;
 			children = (
+				56AC07341B0351BC0008268B /* BasedTableController.h */,
+				56AC07351B0351BC0008268B /* BasedTableController.m */,
+				56AC07371B03532A0008268B /* BaseTableViewCell.h */,
+				56AC07381B03532A0008268B /* BaseTableViewCell.m */,
 			);
 			name = base;
-			sourceTree = "<group>";
-		};
-		56AC073E1B035C3A0008268B /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
-			sourceTree = "<group>";
-		};
-		56AC073F1B035C3E0008268B /* New Group1 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group1";
-			sourceTree = "<group>";
-		};
-		56AC07401B035C4C0008268B /* New Group2 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +261,7 @@
 				56AC073C1B035B1C0008268B /* TestTableViewCell.m in Sources */,
 				56AC07361B0351BC0008268B /* BasedTableController.m in Sources */,
 				56AC07171B0351AA0008268B /* ViewController.m in Sources */,
+				563054271B04B055006D4B71 /* UIView+Ext.m in Sources */,
 				56AC07141B0351AA0008268B /* AppDelegate.m in Sources */,
 				56AC07111B0351AA0008268B /* main.m in Sources */,
 			);
@@ -338,6 +330,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -381,6 +374,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -399,6 +393,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = BaseTableViewController/basePrefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				INFOPLIST_FILE = BaseTableViewController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -410,6 +406,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = BaseTableViewController/basePrefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				INFOPLIST_FILE = BaseTableViewController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -470,6 +468,7 @@
 				56AC07301B0351AB0008268B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56AC07311B0351AB0008268B /* Build configuration list for PBXNativeTarget "BaseTableViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +477,7 @@
 				56AC07331B0351AB0008268B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -13,6 +13,8 @@
 @required
 //cell设置数据的方法
 - (void)setItem:(id)item;
+@optional
++ (CGFloat)heightForItem:(id)item;
 
 @end
 

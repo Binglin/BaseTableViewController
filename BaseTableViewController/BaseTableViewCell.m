@@ -50,15 +50,15 @@
     self.cellItem = item;
 }
 
-//- (void)layoutSubviews{
-//    [super layoutSubviews];
-//    if (self.lineHide == NO) {
-//        self.lineView.left = self.lineInset.left;
-//        self.lineView.width = self.width - self.lineInset.left - self.lineInset.right;
-//        self.lineView.bottom = self.height;
-//    }else{
-//        self.lineView.hidden = YES;
-//    }
-//}
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    if (self.lineHide == NO) {
+        self.lineView.left = self.lineInset.left;
+        self.lineView.width = self.width - self.lineInset.left - self.lineInset.right;
+        self.lineView.bottom = self.height;
+    }else{
+        self.lineView.hidden = YES;
+    }
+}
 
 @end

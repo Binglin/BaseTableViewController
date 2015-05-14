@@ -63,13 +63,13 @@
 - (CGRect)initialframeForTable{
     CGRect frame = self.view.frame;
 
-    UINavigationController *nav = self.navigationController;
-    UINavigationBar *bar = self.navigationController.navigationBar;
-    BOOL hidden = bar.hidden;
-    if (nav && bar && (hidden == NO)) {
-        frame.origin.y = CGRectGetMaxY(bar.frame);
-        frame.size.height = CGRectGetHeight(self.view.frame)-CGRectGetMaxY(bar.frame);
-    }
+//    UINavigationController *nav = self.navigationController;
+//    UINavigationBar *bar = self.navigationController.navigationBar;
+//    BOOL hidden = bar.hidden;
+//    if (nav && bar && (hidden == NO)) {
+//        frame.origin.y = CGRectGetMaxY(bar.frame);
+//        frame.size.height = CGRectGetHeight(self.view.frame)-CGRectGetMaxY(bar.frame);
+//    }
     return frame;
 }
 
@@ -112,6 +112,14 @@
 
 -(Class) cellClassForTable:(UITableView *)table index:(NSIndexPath *)indexPath{
     return [UITableViewCell class];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    Class cellClass = [self cellClassForTable:tableView index:indexPath];
+    if ([cellClass respondsToSelector:@selector(heightForItem:)]) {
+        return [(id<TableViewCellDelegate>)cellClass heightForItem:self.dataSources[indexPath.row]];
+    }
+    return tableView.rowHeight;
 }
 
 //获取dataSources的数据

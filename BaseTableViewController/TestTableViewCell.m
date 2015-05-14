@@ -14,4 +14,8 @@
     self.textLabel.text = item;
 }
 
++ (CGFloat)heightForItem:(id)item{
+    return 80;
+}
+
 @end
