@@ -14,6 +14,9 @@
 		56AC071C1B0351AA0008268B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56AC071B1B0351AA0008268B /* Images.xcassets */; };
 		56AC071F1B0351AA0008268B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56AC071D1B0351AA0008268B /* LaunchScreen.xib */; };
 		56AC072B1B0351AB0008268B /* BaseTableViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC072A1B0351AB0008268B /* BaseTableViewControllerTests.m */; };
+		56AC07361B0351BC0008268B /* BasedTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC07351B0351BC0008268B /* BasedTableController.m */; };
+		56AC07391B03532A0008268B /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC07381B03532A0008268B /* BaseTableViewCell.m */; };
+		56AC073C1B035B1C0008268B /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC073B1B035B1C0008268B /* TestTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		56AC07241B0351AB0008268B /* BaseTableViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseTableViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AC07291B0351AB0008268B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56AC072A1B0351AB0008268B /* BaseTableViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewControllerTests.m; sourceTree = "<group>"; };
+		56AC07341B0351BC0008268B /* BasedTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasedTableController.h; sourceTree = "<group>"; };
+		56AC07351B0351BC0008268B /* BasedTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasedTableController.m; sourceTree = "<group>"; };
+		56AC07371B03532A0008268B /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		56AC07381B03532A0008268B /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		56AC073A1B035B1C0008268B /* TestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
+		56AC073B1B035B1C0008268B /* TestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +94,16 @@
 				56AC07131B0351AA0008268B /* AppDelegate.m */,
 				56AC07151B0351AA0008268B /* ViewController.h */,
 				56AC07161B0351AA0008268B /* ViewController.m */,
+				56AC073A1B035B1C0008268B /* TestTableViewCell.h */,
+				56AC073B1B035B1C0008268B /* TestTableViewCell.m */,
+				56AC07401B035C4C0008268B /* New Group2 */,
+				56AC073E1B035C3A0008268B /* New Group */,
+				56AC073D1B035C310008268B /* base */,
+				56AC07341B0351BC0008268B /* BasedTableController.h */,
+				56AC073F1B035C3E0008268B /* New Group1 */,
+				56AC07351B0351BC0008268B /* BasedTableController.m */,
+				56AC07371B03532A0008268B /* BaseTableViewCell.h */,
+				56AC07381B03532A0008268B /* BaseTableViewCell.m */,
 				56AC07181B0351AA0008268B /* Main.storyboard */,
 				56AC071B1B0351AA0008268B /* Images.xcassets */,
 				56AC071D1B0351AA0008268B /* LaunchScreen.xib */,
@@ -117,6 +136,34 @@
 				56AC07291B0351AB0008268B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		56AC073D1B035C310008268B /* base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = base;
+			sourceTree = "<group>";
+		};
+		56AC073E1B035C3A0008268B /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		56AC073F1B035C3E0008268B /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group1";
+			sourceTree = "<group>";
+		};
+		56AC07401B035C4C0008268B /* New Group2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56AC07391B03532A0008268B /* BaseTableViewCell.m in Sources */,
+				56AC073C1B035B1C0008268B /* TestTableViewCell.m in Sources */,
+				56AC07361B0351BC0008268B /* BasedTableController.m in Sources */,
 				56AC07171B0351AA0008268B /* ViewController.m in Sources */,
 				56AC07141B0351AA0008268B /* AppDelegate.m in Sources */,
 				56AC07111B0351AA0008268B /* main.m in Sources */,
@@ -350,6 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BaseTableViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -360,6 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BaseTableViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
