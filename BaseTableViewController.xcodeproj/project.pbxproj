@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00FFDE8ABE37195C74C11675 /* libPods-BaseTableViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 033D979910508C360056EDF7 /* libPods-BaseTableViewController.a */; };
 		563054271B04B055006D4B71 /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 563054261B04B055006D4B71 /* UIView+Ext.m */; };
 		5696EA0C1B0598000023AD35 /* UITableViewCell+data_set.m in Sources */ = {isa = PBXBuildFile; fileRef = 5696EA0B1B0598000023AD35 /* UITableViewCell+data_set.m */; };
+		5696EA0F1B05DAB50023AD35 /* BaseButtonTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5696EA0E1B05DAB50023AD35 /* BaseButtonTableCell.m */; };
 		56AC07111B0351AA0008268B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC07101B0351AA0008268B /* main.m */; };
 		56AC07141B0351AA0008268B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC07131B0351AA0008268B /* AppDelegate.m */; };
 		56AC07171B0351AA0008268B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC07161B0351AA0008268B /* ViewController.m */; };
@@ -32,11 +34,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0211A23E059654EB98196213 /* Pods-BaseTableViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTableViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseTableViewController/Pods-BaseTableViewController.release.xcconfig"; sourceTree = "<group>"; };
+		033D979910508C360056EDF7 /* libPods-BaseTableViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseTableViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		563054251B04B055006D4B71 /* UIView+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ext.h"; sourceTree = "<group>"; };
 		563054261B04B055006D4B71 /* UIView+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ext.m"; sourceTree = "<group>"; };
 		563054281B04B0D8006D4B71 /* basePrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basePrefix.pch; sourceTree = "<group>"; };
 		5696EA0A1B0598000023AD35 /* UITableViewCell+data_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+data_set.h"; sourceTree = "<group>"; };
 		5696EA0B1B0598000023AD35 /* UITableViewCell+data_set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+data_set.m"; sourceTree = "<group>"; };
+		5696EA0D1B05DAB50023AD35 /* BaseButtonTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseButtonTableCell.h; sourceTree = "<group>"; };
+		5696EA0E1B05DAB50023AD35 /* BaseButtonTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseButtonTableCell.m; sourceTree = "<group>"; };
 		56AC070B1B0351AA0008268B /* BaseTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AC070F1B0351AA0008268B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56AC07101B0351AA0008268B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,6 +62,7 @@
 		56AC07381B03532A0008268B /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		56AC073A1B035B1C0008268B /* TestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
 		56AC073B1B035B1C0008268B /* TestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
+		F0E93E14BB81B391A6B7992F /* Pods-BaseTableViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTableViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseTableViewController/Pods-BaseTableViewController.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00FFDE8ABE37195C74C11675 /* libPods-BaseTableViewController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +99,8 @@
 				56AC070D1B0351AA0008268B /* BaseTableViewController */,
 				56AC07271B0351AB0008268B /* BaseTableViewControllerTests */,
 				56AC070C1B0351AA0008268B /* Products */,
+				A74DBBBFEE883A94C9C4FE83 /* Pods */,
+				5E080909303744EFC3F5385D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,8 +168,27 @@
 				56AC07381B03532A0008268B /* BaseTableViewCell.m */,
 				5696EA0A1B0598000023AD35 /* UITableViewCell+data_set.h */,
 				5696EA0B1B0598000023AD35 /* UITableViewCell+data_set.m */,
+				5696EA0D1B05DAB50023AD35 /* BaseButtonTableCell.h */,
+				5696EA0E1B05DAB50023AD35 /* BaseButtonTableCell.m */,
 			);
 			name = base;
+			sourceTree = "<group>";
+		};
+		5E080909303744EFC3F5385D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				033D979910508C360056EDF7 /* libPods-BaseTableViewController.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A74DBBBFEE883A94C9C4FE83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0E93E14BB81B391A6B7992F /* Pods-BaseTableViewController.debug.xcconfig */,
+				0211A23E059654EB98196213 /* Pods-BaseTableViewController.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56AC072E1B0351AB0008268B /* Build configuration list for PBXNativeTarget "BaseTableViewController" */;
 			buildPhases = (
+				0707FC333B15AE259A37DCD1 /* Check Pods Manifest.lock */,
 				56AC07071B0351AA0008268B /* Sources */,
 				56AC07081B0351AA0008268B /* Frameworks */,
 				56AC07091B0351AA0008268B /* Resources */,
+				6BC90D6D37099590C1ADDFDA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,6 +288,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0707FC333B15AE259A37DCD1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6BC90D6D37099590C1ADDFDA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaseTableViewController/Pods-BaseTableViewController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		56AC07071B0351AA0008268B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -268,6 +332,7 @@
 				56AC07171B0351AA0008268B /* ViewController.m in Sources */,
 				563054271B04B055006D4B71 /* UIView+Ext.m in Sources */,
 				56AC07141B0351AA0008268B /* AppDelegate.m in Sources */,
+				5696EA0F1B05DAB50023AD35 /* BaseButtonTableCell.m in Sources */,
 				5696EA0C1B0598000023AD35 /* UITableViewCell+data_set.m in Sources */,
 				56AC07111B0351AA0008268B /* main.m in Sources */,
 			);
@@ -397,6 +462,7 @@
 		};
 		56AC072F1B0351AB0008268B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0E93E14BB81B391A6B7992F /* Pods-BaseTableViewController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = BaseTableViewController/basePrefix.pch;
@@ -410,6 +476,7 @@
 		};
 		56AC07301B0351AB0008268B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0211A23E059654EB98196213 /* Pods-BaseTableViewController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = BaseTableViewController/basePrefix.pch;
