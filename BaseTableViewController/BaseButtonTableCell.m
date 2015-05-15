@@ -46,21 +46,24 @@
 /*带一个button的基础类*/
 @implementation OneButtonTableViewCell
 
-
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        self.actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self.contentView addSubview:self.actionButton];
-        [self.actionButton addTarget:self action:@selector(buttonActioned:) forControlEvents:UIControlEventTouchUpInside];
-        [self.actionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    }
-    return self;
+- (void)subclassInitializeViews{
+    self.actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.contentView addSubview:self.actionButton];
+    [self.actionButton addTarget:self action:@selector(buttonActioned:) forControlEvents:UIControlEventTouchUpInside];
+    [self.actionButton setTitle:@"点击查看" forState:UIControlStateNormal];
+    [self.actionButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    self.actionButton.contentEdgeInsets = UIEdgeInsetsMake(5, 10, 5, 10);
+    self.actionButton.layer.borderColor = [UIColor grayColor].CGColor;
+    self.actionButton.layer.borderWidth = 2.0f;
+    self.actionButton.layer.cornerRadius = 6.0f;
+    [self.contentView addSubview:self.actionButton];
 }
 
-- (void)layoutSubviews{
-    [super layoutSubviews];
-    [self.actionButton sizeToFit];
-    self.actionButton.right = self.width - 10.f;
-    self.actionButton.center = CGPointMake(self.actionButton.center.x, self.height/2.f);
+- (void)setUpconstraints{
+    [self.actionButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.contentView.mas_right).with.offset(-10.f);
+        make.centerY.mas_equalTo(self.contentView);
+    }];
 }
+
 @end

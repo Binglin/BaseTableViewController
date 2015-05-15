@@ -24,9 +24,15 @@
 
 @property (nonatomic, strong, readonly) UIView *lineView;
 
-//cell的initWithStyle:方法及initWithCoder均调用的方法
-//子类页面配置
-- (void)subViewConfig;
+/** ##### warning #####请勿重写initWithStyle:(UITableViewCellStyle)style
+                        reuseIdentifier:(NSString *)reuseIdentifier
+ 
+ *  cell的initWithStyle:方法及initWithCoder均调用的方法
+ *  ~~~~~~子类添加view方法~~~~~~请在此方法中添加子view，不要复写initWithStyle:方法
+ */
+- (void)subclassInitializeViews;
 
+/***  使用autolayout时 设置constraints */
+- (void)setUpconstraints;
 
 @end
