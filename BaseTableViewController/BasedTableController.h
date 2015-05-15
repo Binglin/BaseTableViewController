@@ -27,6 +27,7 @@
  */
 - (void)loadMore:(BOOL)more;
 
+- (id)dataAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 

@@ -8,7 +8,21 @@
 
 #import "TestTableViewCell.h"
 
+@interface TestTableViewCell ()
+
+@property (nonatomic, strong) UIView *testSubView;
+
+@end
+
+
 @implementation TestTableViewCell
+
+/**
+ *  代码添加cell
+ */
+- (void)subclassInitializeViews{
+    
+}
 
 - (void)setItem:(id)item{
     [super setItem:item];

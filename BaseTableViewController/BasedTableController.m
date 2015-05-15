@@ -42,6 +42,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self configTableView];
     [self loadMore:NO];
 }
@@ -105,6 +106,10 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     Class cellClass = [self cellClassForTable:tableView index:indexPath];
     return [cellClass heightForItem:self.dataSources[indexPath.row]];
+}
+
+- (id)dataAtIndexPath:(NSIndexPath *)indexPath{
+    return self.dataSources[indexPath.row];
 }
 
 //获取dataSources的数据

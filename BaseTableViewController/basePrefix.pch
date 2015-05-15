@@ -9,6 +9,7 @@
 #ifndef BaseTableViewController_basePrefix_pch
 #define BaseTableViewController_basePrefix_pch
 
-#import "UIView+Ext.h"
+//#import "UIView+Ext.h"
+#import <Masonry.h>
 
 #endif

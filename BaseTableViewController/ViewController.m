@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TestTableViewCell.h"
+#import "UIViewController+transitionFunc.h"
 
 #define macro_keywordify try{} @catch (...){}
 
@@ -26,6 +27,14 @@ __weak typeof(to_weakify)     macro_concat_(to_weakify,__weak) = (to_weakify);
 __strong typeof(to_strongify)  macro_concat_(to_strongify,__strong) = macro_concat_(to_strongify,__weak);
 
 
+/* macro_weakify(self);
+ 
+ NSString * macro_concate(self,abs) = @"AB";
+ 
+ dispatch_block_t block = ^(){
+ macro_strongify(self);
+ 
+ };*/
 
 @interface ViewController ()
 
@@ -36,29 +45,24 @@ __strong typeof(to_strongify)  macro_concat_(to_strongify,__strong) = macro_conc
 @implementation ViewController
 
 - (void)loadMore:(BOOL)more{
-    [self.dataSources addObjectsFromArray:@[@"测试数据",@"测试数据",@"测试数据",@"测试数据",@"测试数据",
-                                            @"测试数据",@"测试数据",@"测试数据",@"测试数据",@"测试数据"]];
+    [self.dataSources addObjectsFromArray:@[@"TestCodeCellController",
+                                            @"TestXibCellController"]];
+    
+    
+    
 }
 
 - (Class)cellClassForTable:(UITableView *)table index:(NSIndexPath *)indexPath{
     return [TestTableViewCell class];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *vcClassName = [self dataAtIndexPath:indexPath];
+    [self pushVCClass:NSClassFromString(vcClassName)];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    macro_weakify(self);
-    
-    NSString * macro_concate(self,abs) = @"AB";
-
-    dispatch_block_t block = ^(){
-        macro_strongify(self);
-
-    };
-    
-    block();
-    
-    NSLog(@"%@",@"haha");
 }
 
 - (void)didReceiveMemoryWarning {

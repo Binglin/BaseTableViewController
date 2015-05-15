@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 Binglin. All rights reserved.
 //
 
-#import "BaseTableViewCell.h"
+#import "BaseButtonTableCell.h"
 
-@interface TestTableViewCell : BaseTableViewCell
+@interface TestTableViewCell : OneButtonTableViewCell
 
 @end
