@@ -7,7 +7,7 @@
 //
 
 #import "TestCodeCellController.h"
-#import "TestTableViewCell.h"
+#import "TestCodeTableViewCell.h"
 
 @implementation TestCodeCellController
 
@@ -18,7 +18,7 @@
 }
 
 - (Class)cellClassForTable:(UITableView *)table index:(NSIndexPath *)indexPath{
-    return [TestTableViewCell class];
+    return [TestCodeTableViewCell class];
 }
 
 @end

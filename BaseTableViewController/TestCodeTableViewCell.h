@@ -8,6 +8,6 @@
 
 #import "BaseButtonTableCell.h"
 
-@interface TestTableViewCell : OneButtonTableViewCell
+@interface TestCodeTableViewCell : OneButtonTableViewCell
 
 @end

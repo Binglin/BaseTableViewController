@@ -27,7 +27,7 @@
 /** ##### warning #####请勿重写initWithStyle:(UITableViewCellStyle)style
                         reuseIdentifier:(NSString *)reuseIdentifier
  
- *  cell的initWithStyle:方法及initWithCoder均调用的方法
+ *  cell的initWithStyle:方法及initWithCoder均调用的方法 如果父类在此方法中有添加，则子类需要调用super
  *  ~~~~~~子类添加view方法~~~~~~请在此方法中添加子view，不要复写initWithStyle:方法
  */
 - (void)subclassInitializeViews;

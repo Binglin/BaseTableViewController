@@ -14,6 +14,7 @@
 		563315D51B05FAEF0050D7B5 /* UIViewController+transitionFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 563315D41B05FAEF0050D7B5 /* UIViewController+transitionFunc.m */; };
 		563315D81B05FC260050D7B5 /* TestXibTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 563315D71B05FC260050D7B5 /* TestXibTableViewCell.m */; };
 		563315DA1B05FC3D0050D7B5 /* TestXibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 563315D91B05FC3D0050D7B5 /* TestXibTableViewCell.xib */; };
+		563315DD1B0602590050D7B5 /* ViewControllerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 563315DC1B0602590050D7B5 /* ViewControllerCell.m */; };
 		5696EA0C1B0598000023AD35 /* UITableViewCell+data_set.m in Sources */ = {isa = PBXBuildFile; fileRef = 5696EA0B1B0598000023AD35 /* UITableViewCell+data_set.m */; };
 		5696EA0F1B05DAB50023AD35 /* BaseButtonTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5696EA0E1B05DAB50023AD35 /* BaseButtonTableCell.m */; };
 		56AC07111B0351AA0008268B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC07101B0351AA0008268B /* main.m */; };
@@ -25,7 +26,7 @@
 		56AC072B1B0351AB0008268B /* BaseTableViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC072A1B0351AB0008268B /* BaseTableViewControllerTests.m */; };
 		56AC07361B0351BC0008268B /* BasedTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC07351B0351BC0008268B /* BasedTableController.m */; };
 		56AC07391B03532A0008268B /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC07381B03532A0008268B /* BaseTableViewCell.m */; };
-		56AC073C1B035B1C0008268B /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC073B1B035B1C0008268B /* TestTableViewCell.m */; };
+		56AC073C1B035B1C0008268B /* TestCodeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC073B1B035B1C0008268B /* TestCodeTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		563315D61B05FC260050D7B5 /* TestXibTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestXibTableViewCell.h; sourceTree = "<group>"; };
 		563315D71B05FC260050D7B5 /* TestXibTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestXibTableViewCell.m; sourceTree = "<group>"; };
 		563315D91B05FC3D0050D7B5 /* TestXibTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestXibTableViewCell.xib; sourceTree = "<group>"; };
+		563315DB1B0602590050D7B5 /* ViewControllerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerCell.h; sourceTree = "<group>"; };
+		563315DC1B0602590050D7B5 /* ViewControllerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerCell.m; sourceTree = "<group>"; };
 		5696EA0A1B0598000023AD35 /* UITableViewCell+data_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+data_set.h"; sourceTree = "<group>"; };
 		5696EA0B1B0598000023AD35 /* UITableViewCell+data_set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+data_set.m"; sourceTree = "<group>"; };
 		5696EA0D1B05DAB50023AD35 /* BaseButtonTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseButtonTableCell.h; sourceTree = "<group>"; };
@@ -74,8 +77,8 @@
 		56AC07351B0351BC0008268B /* BasedTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasedTableController.m; sourceTree = "<group>"; };
 		56AC07371B03532A0008268B /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		56AC07381B03532A0008268B /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
-		56AC073A1B035B1C0008268B /* TestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
-		56AC073B1B035B1C0008268B /* TestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
+		56AC073A1B035B1C0008268B /* TestCodeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCodeTableViewCell.h; sourceTree = "<group>"; };
+		56AC073B1B035B1C0008268B /* TestCodeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCodeTableViewCell.m; sourceTree = "<group>"; };
 		F0E93E14BB81B391A6B7992F /* Pods-BaseTableViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTableViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseTableViewController/Pods-BaseTableViewController.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,8 +113,8 @@
 		563315CB1B05F98E0050D7B5 /* TestGroupClass */ = {
 			isa = PBXGroup;
 			children = (
-				56AC073A1B035B1C0008268B /* TestTableViewCell.h */,
-				56AC073B1B035B1C0008268B /* TestTableViewCell.m */,
+				56AC073A1B035B1C0008268B /* TestCodeTableViewCell.h */,
+				56AC073B1B035B1C0008268B /* TestCodeTableViewCell.m */,
 				563315D61B05FC260050D7B5 /* TestXibTableViewCell.h */,
 				563315D71B05FC260050D7B5 /* TestXibTableViewCell.m */,
 				563315D91B05FC3D0050D7B5 /* TestXibTableViewCell.xib */,
@@ -159,6 +162,8 @@
 				56AC07131B0351AA0008268B /* AppDelegate.m */,
 				56AC07151B0351AA0008268B /* ViewController.h */,
 				56AC07161B0351AA0008268B /* ViewController.m */,
+				563315DB1B0602590050D7B5 /* ViewControllerCell.h */,
+				563315DC1B0602590050D7B5 /* ViewControllerCell.m */,
 				563315CB1B05F98E0050D7B5 /* TestGroupClass */,
 				56AC073D1B035C310008268B /* base */,
 				563054291B04B0F5006D4B71 /* viewExt */,
@@ -366,10 +371,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				563315DD1B0602590050D7B5 /* ViewControllerCell.m in Sources */,
 				563315CE1B05F9B60050D7B5 /* TestCodeCellController.m in Sources */,
 				563315D11B05F9C50050D7B5 /* TestXibCellController.m in Sources */,
 				56AC07391B03532A0008268B /* BaseTableViewCell.m in Sources */,
-				56AC073C1B035B1C0008268B /* TestTableViewCell.m in Sources */,
+				56AC073C1B035B1C0008268B /* TestCodeTableViewCell.m in Sources */,
 				56AC07361B0351BC0008268B /* BasedTableController.m in Sources */,
 				56AC07171B0351AA0008268B /* ViewController.m in Sources */,
 				563054271B04B055006D4B71 /* UIView+Ext.m in Sources */,

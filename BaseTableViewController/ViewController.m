@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "TestTableViewCell.h"
+#import "ViewControllerCell.h"
 #import "UIViewController+transitionFunc.h"
 
 #define macro_keywordify try{} @catch (...){}
@@ -53,7 +53,7 @@ __strong typeof(to_strongify)  macro_concat_(to_strongify,__strong) = macro_conc
 }
 
 - (Class)cellClassForTable:(UITableView *)table index:(NSIndexPath *)indexPath{
-    return [TestTableViewCell class];
+    return [ViewControllerCell class];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
