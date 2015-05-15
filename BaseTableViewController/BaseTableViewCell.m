@@ -7,7 +7,10 @@
 //
 
 #import "BaseTableViewCell.h"
+#import <objc/runtime.h>
 
+
+#pragma mark -
 @interface BaseTableViewCell ()
 
 @property (nonatomic, strong) UIView *lineView;
@@ -62,3 +65,4 @@
 }
 
 @end
+

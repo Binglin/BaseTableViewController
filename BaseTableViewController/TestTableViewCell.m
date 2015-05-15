@@ -11,6 +11,7 @@
 @implementation TestTableViewCell
 
 - (void)setItem:(id)item{
+    [super setItem:item];
     self.textLabel.text = item;
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		563054271B04B055006D4B71 /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 563054261B04B055006D4B71 /* UIView+Ext.m */; };
+		5696EA0C1B0598000023AD35 /* UITableViewCell+data_set.m in Sources */ = {isa = PBXBuildFile; fileRef = 5696EA0B1B0598000023AD35 /* UITableViewCell+data_set.m */; };
 		56AC07111B0351AA0008268B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC07101B0351AA0008268B /* main.m */; };
 		56AC07141B0351AA0008268B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC07131B0351AA0008268B /* AppDelegate.m */; };
 		56AC07171B0351AA0008268B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC07161B0351AA0008268B /* ViewController.m */; };
@@ -34,6 +35,8 @@
 		563054251B04B055006D4B71 /* UIView+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ext.h"; sourceTree = "<group>"; };
 		563054261B04B055006D4B71 /* UIView+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ext.m"; sourceTree = "<group>"; };
 		563054281B04B0D8006D4B71 /* basePrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basePrefix.pch; sourceTree = "<group>"; };
+		5696EA0A1B0598000023AD35 /* UITableViewCell+data_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+data_set.h"; sourceTree = "<group>"; };
+		5696EA0B1B0598000023AD35 /* UITableViewCell+data_set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+data_set.m"; sourceTree = "<group>"; };
 		56AC070B1B0351AA0008268B /* BaseTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AC070F1B0351AA0008268B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56AC07101B0351AA0008268B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 				56AC07351B0351BC0008268B /* BasedTableController.m */,
 				56AC07371B03532A0008268B /* BaseTableViewCell.h */,
 				56AC07381B03532A0008268B /* BaseTableViewCell.m */,
+				5696EA0A1B0598000023AD35 /* UITableViewCell+data_set.h */,
+				5696EA0B1B0598000023AD35 /* UITableViewCell+data_set.m */,
 			);
 			name = base;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				56AC07171B0351AA0008268B /* ViewController.m in Sources */,
 				563054271B04B055006D4B71 /* UIView+Ext.m in Sources */,
 				56AC07141B0351AA0008268B /* AppDelegate.m in Sources */,
+				5696EA0C1B0598000023AD35 /* UITableViewCell+data_set.m in Sources */,
 				56AC07111B0351AA0008268B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

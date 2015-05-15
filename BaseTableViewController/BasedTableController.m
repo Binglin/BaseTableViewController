@@ -7,10 +7,10 @@
 
 #import "BasedTableController.h"
 #import "BaseTableViewCell.h"
+#import "UITableViewCell+data_set.h"
 
-@interface BasedTableController (){
-    UIImageView *_topLight;
-}
+@interface BasedTableController ()
+
 @property (nonatomic, strong)  UITableView *tableView;
 
 @end
@@ -20,16 +20,24 @@
 
 - (instancetype)init{
     if (self = [super init]) {
-        self.dataSources = [NSMutableArray array];
+        [self initialize];
     }
     return self;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
     if (self = [super initWithCoder:aDecoder]) {
-        self.dataSources = [NSMutableArray array];
+        [self initialize];
     }
     return self;
+}
+
+- (void)initialize{
+    self.dataSources = [NSMutableArray array];
+    if([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]){
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
 }
 
 - (void)viewDidLoad {
@@ -62,20 +70,17 @@
 //计算tableView的frame
 - (CGRect)initialframeForTable{
     CGRect frame = self.view.frame;
-
-//    UINavigationController *nav = self.navigationController;
-//    UINavigationBar *bar = self.navigationController.navigationBar;
-//    BOOL hidden = bar.hidden;
-//    if (nav && bar && (hidden == NO)) {
-//        frame.origin.y = CGRectGetMaxY(bar.frame);
-//        frame.size.height = CGRectGetHeight(self.view.frame)-CGRectGetMaxY(bar.frame);
-//    }
+    UINavigationController *nav = self.navigationController;
+    UINavigationBar *bar = self.navigationController.navigationBar;
+    BOOL hidden = bar.hidden;
+    if (nav && bar && (hidden == NO)) {
+        frame.size.height = CGRectGetHeight(self.view.frame)-CGRectGetMaxY(bar.frame);
+    }
     return frame;
 }
 
 #pragma mark -  UITableViewDataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataSources.count;
 }
 
@@ -87,26 +92,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     Class  cellClass = [self cellClassForTable:tableView index:indexPath];
-    NSString *cellStr = NSStringFromClass(cellClass);
-    BaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
-    if (cell == nil) {
-        //xib加载cell
-        if([[NSBundle mainBundle] pathForResource:cellStr ofType:@"nib"] != nil)
-        {
-            UINib *nib = [UINib nibWithNibName:cellStr bundle:nil];
-            [tableView registerNib:nib forCellReuseIdentifier:cellStr];
-            cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
-        }
-        //代码写cell
-        else{
-            [tableView registerClass:cellClass forCellReuseIdentifier:cellStr];
-            cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
-        }
-    }
-    
-//    if ([cell isKindOfClass:[BaseTableViewCell class]]) {
+    UITableViewCell *cell = [cellClass dequeueResuableCellWithTableView:tableView];
     [cell setItem:[self.dataSources objectAtIndex:indexPath.row]];
-//    }
+
     return cell;
 }
 
@@ -116,10 +104,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     Class cellClass = [self cellClassForTable:tableView index:indexPath];
-    if ([cellClass respondsToSelector:@selector(heightForItem:)]) {
-        return [(id<TableViewCellDelegate>)cellClass heightForItem:self.dataSources[indexPath.row]];
-    }
-    return tableView.rowHeight;
+    return [cellClass heightForItem:self.dataSources[indexPath.row]];
 }
 
 //获取dataSources的数据
