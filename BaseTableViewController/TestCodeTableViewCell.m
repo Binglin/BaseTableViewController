@@ -25,6 +25,7 @@
     self.testSubView = [[UIView alloc] init];
     self.testSubView.backgroundColor = [UIColor redColor];
     [self.contentView addSubview:self.testSubView];
+    self.frame = CGRectMake(0, 0, 100, 100);
 }
 
 - (void)setUpconstraints{
@@ -39,11 +40,7 @@
 - (void)setItem:(id)item{
     item = [item stringByAppendingString:NSStringFromClass([self class])];
     [super setItem:item];
-//    self.textLabel.text = item ;
 }
 
-+ (CGFloat)heightForItem:(id)item{
-    return 80;
-}
 
 @end

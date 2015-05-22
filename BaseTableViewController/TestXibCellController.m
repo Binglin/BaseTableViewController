@@ -13,11 +13,20 @@
 @implementation TestXibCellController
 
 - (void)loadMore:(BOOL)more{
-    [self.dataSources addObjectsFromArray:@[@"xib生成的cell显示example",@"xib生成的cell显示example",
-                                            @"xib生成的cell显示example",@"xib生成的cell显示example",
-                                            @"xib生成的cell显示example",@"xib生成的cell显示example",
-                                            @"xib生成的cell显示example",@"xib生成的cell显示example",
-                                            @"xib生成的cell显示example",@"xib生成的cell显示example"]];
+    [self.dataSources addObjectsFromArray:@[@"xib生成的cell显示example",
+                                            @"xib生成的cell显示example",
+                                            @"xib生成的",
+                                            @"。。。",
+                                            @"xib生成的cell显示examplexib生成的cell显示examplexib生成的cell显示example",
+                                            @"xib生成的cell显示examplexib生成的cell显示examplexib生成的cell显示example",
+                                            @"xib生成的cell显示examplexib生成的cell显示examplexib生成的cell显示example",
+                                            @"xib生成的cell显示example",
+                                            @"xib生成的cell显示example",
+                                            @"xib生成的cell显示example",
+                                            @"xib生成的cell显示example",
+                                            @"xib生成的cell显示example",
+                                            @"xib生成的cell显示examplexib生成的cell显示examplexib生成的cell显示examplexib生成的cell显示examplexib生成的cell"
+                                            ]];
 }
 
 - (Class)cellClassForTable:(UITableView *)table index:(NSIndexPath *)indexPath{

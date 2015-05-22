@@ -14,8 +14,4 @@
     self.leftLabel.text = item;
 }
 
-+ (CGFloat)heightForItem:(id)object{
-    return 200;
-}
-
 @end
