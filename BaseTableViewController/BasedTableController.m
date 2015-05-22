@@ -104,8 +104,52 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //获取cell的class
     Class cellClass = [self cellClassForTable:tableView index:indexPath];
-    return [cellClass heightForItem:self.dataSources[indexPath.row]];
+    
+    /**
+     *  如果cell实现了heightForItem： 则返回该值
+     *
+     *  如果没有实现 则判断是否有用AutoLayout,有用则返回其的值，如果没有 则返回indexPath对应的cell的height
+     *
+     */
+    if (![cellClass respondsToSelector:@selector(heightForItem:)]) {
+        UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+        NSNumber *isUsedAutoLayout = [cellClass usedAutoLayout];
+        
+        /**
+         *  如果isUsedAutoLayout为空，则表示并没有判断该cell类是否有使用autolayout
+         */
+        if (isUsedAutoLayout) {
+            
+            if (YES == [isUsedAutoLayout boolValue]) {
+                /**
+                 *  完全使用Autolayout布局时使用
+                 */
+                CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+                return size.height;
+            }else{
+                
+                /* 在cell的setItem:方法中设置数据的同时设置cell的高度*/
+                return CGRectGetHeight(cell.frame);
+            }
+        }
+        /**
+         *  判断该cell类是否有使用autolayout
+         */
+        else{
+            
+            //cell未使用autolayout或者条件不足时size值会为CGSizeZero
+            CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+            BOOL isUsedALayout = CGSizeEqualToSize(size, CGSizeZero) ? NO : YES;
+            [cellClass setUsedAutoLayout:@(isUsedALayout)];
+            return isUsedALayout ?  size.height : CGRectGetHeight(cell.frame);
+        }
+    }
+    else{
+        return [cellClass heightForItem:self.dataSources[indexPath.row]];
+    }
 }
 
 - (id)dataAtIndexPath:(NSIndexPath *)indexPath{

@@ -12,6 +12,12 @@
 #pragma mark - UITableViewCell (data_set) cell设置数据方法,cell的高度设置
 @interface UITableViewCell (data_set)
 
+/**
+ *  判断是否有使用AutoLayout;
+ */
++ (NSNumber *)usedAutoLayout;
++ (void)setUsedAutoLayout:(NSNumber *)isUsed;
+
 //cell所存储的数据 使用runtime设置，断点时无法查看到cellItem的数据
 @property (nonatomic, assign, readonly) id cellItem;
 
