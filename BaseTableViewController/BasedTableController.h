@@ -18,7 +18,22 @@
 @property (nonatomic, strong,readonly)  UITableView     *tableView;
 
 /** cell的class*/
--(Class) cellClassForTable:(UITableView *)table index:(NSIndexPath *)indexPath;
+- (Class) cellClassForTable:(UITableView *)table index:(NSIndexPath *)indexPath;
+
+/**
+ *  在view view Controller初始化完成后即注册nib 或者 cell
+ *
+ *  @param tableView self.tableView已调用此方法
+ */
+- (void)registerNibOrClass:(UITableView *)tableView;
+
+/**
+ *  基础类未实现，如果子类实现 则表示为多种类cell
+ *
+ *  @return 所有cell种类数组
+ */
+- (NSArray*)cellClassesForTable:(UITableView *)table;
+
 
 /**
  *  获取dataSources的数据 网络请求加载数据也写在此方法
