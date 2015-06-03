@@ -17,9 +17,13 @@
 
 @implementation TestCodeTableViewCell
 
-/**
- *  代码添加cell
- */
+//- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+//    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+//        [self subclassInitializeViews];
+//    }
+//    return self;
+//}
+
 - (void)subclassInitializeViews{
     [super subclassInitializeViews];
     self.testSubView = [[UIView alloc] init];
@@ -27,6 +31,10 @@
     [self.contentView addSubview:self.testSubView];
     self.frame = CGRectMake(0, 0, 100, 100);
 }
+
+/**
+ *  代码添加cell
+ */
 
 - (void)setUpconstraints{
     [super setUpconstraints];
@@ -37,10 +45,13 @@
     }];
 }
 
-- (void)setItem:(id)item{
-    item = [item stringByAppendingString:NSStringFromClass([self class])];
-    [super setItem:item];
+
+- (void)setItem:(NSString *)item{
+    self.textLabel.text = [NSString stringWithFormat:@"          %@",item];
 }
 
-
 @end
+
+
+
+

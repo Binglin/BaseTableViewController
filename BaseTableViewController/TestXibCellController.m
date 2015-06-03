@@ -33,4 +33,16 @@
     return [TestXibTableViewCell class];
 }
 
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    static NSString *identifier = @"xibCell";
+//    TestXibTableViewCell *codeCell = [tableView dequeueReusableCellWithIdentifier:identifier];
+//    if (codeCell == nil) {
+//        UINib *nib = [UINib nibWithNibName:@"TestXibTableViewCell" bundle:nil];
+//        [tableView registerNib:nib forCellReuseIdentifier:identifier];
+//        codeCell = [tableView dequeueReusableCellWithIdentifier:identifier];
+//    }
+//    [codeCell setItem:self.dataSources[indexPath.row]];
+//    return codeCell;
+//}
+
 @end

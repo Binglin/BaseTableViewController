@@ -38,6 +38,7 @@
 
 - (void)setItem:(id)item{
     self.cellItem = item;
+    self.textLabel.text = item;
 }
 
 + (instancetype)dequeueResuableCellWithTableView:(UITableView *)tableView{

@@ -53,7 +53,7 @@
     //self.tableView.editing = NO;
 }
 
-
+#pragma mark -configTableView
 - (void)configTableView{
     self.tableView = [[UITableView alloc] initWithFrame:[self initialframeForTable]
                                                   style:UITableViewStylePlain];
@@ -64,6 +64,7 @@
     [self.view addSubview:self.tableView];
     UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 1.f)];
     self.tableView.tableFooterView = footer;
+    [self registerNibOrClass:self.tableView];
     if ([self.tableView respondsToSelector:@selector(setEstimatedRowHeight:)]) {
         self.tableView.estimatedRowHeight = 44.f;
     }
@@ -74,6 +75,43 @@
     [super viewWillLayoutSubviews];
     self.tableView.frame = [self initialframeForTable];
 }
+
+
+#pragma mark - register cell
+- (void)registerNibOrClass:(UITableView *)tableView{
+    NSArray *cellsClassArr = [self cellClassesForTable:tableView];
+    
+    //多种cell注册
+    if (cellsClassArr && cellsClassArr.count) {
+        for (Class class_cell in [self cellClassesForTable:tableView]) {
+            [self registerCell:class_cell InTableView:tableView];
+        }
+    }
+    //单种cell注册
+    else{
+        [self registerCell:[self cellClassForTable:tableView index:nil] InTableView:tableView];
+    }
+}
+
+- (void)registerCell:(Class)cellClass InTableView:(UITableView *)tableView{
+    
+    NSString *cellStr = NSStringFromClass([cellClass class]);
+    //xib加载cell
+    if([[NSBundle mainBundle] pathForResource:cellStr ofType:@"nib"] != nil)
+    {
+        UINib *nib = [UINib nibWithNibName:cellStr bundle:nil];
+        [tableView registerNib:nib forCellReuseIdentifier:cellStr];
+    }
+    //代码写cell
+    else{
+        [tableView registerClass:cellClass forCellReuseIdentifier:cellStr];
+    }
+}
+
+- (NSArray *)cellClassesForTable:(UITableView *)table{
+    return nil;
+}
+
 
 
 #pragma mark - private
@@ -103,7 +141,7 @@
 //BasedTableController
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     Class  cellClass = [self cellClassForTable:tableView index:indexPath];
-    UITableViewCell *cell = [cellClass dequeueResuableCellWithTableView:tableView];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([cellClass class])];
     [cell setItem:[self.dataSources objectAtIndex:indexPath.row]];
 
     return cell;

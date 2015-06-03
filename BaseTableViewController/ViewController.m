@@ -9,22 +9,9 @@
 #import "ViewController.h"
 #import "ViewControllerCell.h"
 #import "UIViewController+transitionFunc.h"
-
-#define macro_keywordify try{} @catch (...){}
-
-#define macro_stringify_(A) #A
-#define macro_stringify(A)  macro_stringify_(A)
-
-#define macro_concat_(A,B)  A ## B
-#define macro_concate(A,B)  macro_concat_(A,B)
+#import "UITableView+heightCache.h"
 
 
-
-#define macro_weakify(to_weakify)   \
-__weak typeof(to_weakify)     macro_concat_(to_weakify,__weak) = (to_weakify);
-
-#define macro_strongify(to_strongify) \
-__strong typeof(to_strongify)  macro_concat_(to_strongify,__strong) = macro_concat_(to_strongify,__weak);
 
 
 /* macro_weakify(self);
@@ -35,6 +22,7 @@ __strong typeof(to_strongify)  macro_concat_(to_strongify,__strong) = macro_conc
  macro_strongify(self);
  
  };*/
+
 
 @interface ViewController ()
 
@@ -63,11 +51,62 @@ __strong typeof(to_strongify)  macro_concat_(to_strongify,__strong) = macro_conc
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UITableViewHeightCache *cache = [UITableViewHeightCache new];
+    NSMutableDictionary *dic_cache = [NSMutableDictionary new];
+    NSMutableArray *arr_cache = @[].mutableCopy;
+    CFMutableDictionaryRef cgDic = cg
+    
+    [cache setObject:@"111" forKey:[NSIndexPath indexPathForRow:0 inSection:0]];
+    [dic_cache setObject:@"111" forKey:[NSIndexPath indexPathForRow:0 inSection:0]];
+    [arr_cache addObject:@[@"111"].mutableCopy];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    
+    
+    CFDictionaryAddValue(<#CFMutableDictionaryRef theDict#>, <#const void *key#>, <#const void *value#>)
+    
+    NSInteger times = 10000000;
+    NSLog(@"cache");
+    [self time:^{
+        for (int i = 0; i < times; i ++) {
+//            [cache setObject:@"111" forKey:indexPath];
+            id indexObject = [cache objectForKey:indexPath];
+        }
+    }];
+    
+    
+    NSLog(@"dic");
+    [self time:^{
+        for (int i = 0; i < times; i ++) {
+//            [dic_cache setObject:@"111" forKey:indexPath];
+            id indexDic    = [dic_cache objectForKey:indexPath];
+        }
+    }];
+    
+    
+    NSLog(@"arr");
+    [self time:^{
+        for (int i = 0; i < times; i ++) {
+//            arr_cache[indexPath.section][indexPath.row] = @"111";
+            id indexArr = arr_cache[indexPath.section][indexPath.row];
+        }
+    }];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)time:(dispatch_block_t)block_t{
+    CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
+    if (block_t) {
+        block_t();
+    }
+    CFAbsoluteTime end = CFAbsoluteTimeGetCurrent();
+    NSLog(@"%f",end - start);
 }
 
 @end

@@ -9,7 +9,7 @@
 #import "BaseTableViewCell.h"
 #import "BaseButtonTableCell.h"
 
-@interface TestXibTableViewCell : OneButtonTableViewCell
+@interface TestXibTableViewCell : BaseTableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *leftLabel;
 
