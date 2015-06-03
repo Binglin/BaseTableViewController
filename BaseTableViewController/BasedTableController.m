@@ -64,19 +64,28 @@
     [self.view addSubview:self.tableView];
     UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 1.f)];
     self.tableView.tableFooterView = footer;
+    if ([self.tableView respondsToSelector:@selector(setEstimatedRowHeight:)]) {
+        self.tableView.estimatedRowHeight = 44.f;
+    }
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
+}
+
+- (void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+    self.tableView.frame = [self initialframeForTable];
 }
 
 
 #pragma mark - private
 //计算tableView的frame
 - (CGRect)initialframeForTable{
-    CGRect frame = self.view.frame;
-    UINavigationController *nav = self.navigationController;
-    UINavigationBar *bar = self.navigationController.navigationBar;
-    BOOL hidden = bar.hidden;
-    if (nav && bar && (hidden == NO)) {
-        frame.size.height = CGRectGetHeight(self.view.frame)-CGRectGetMaxY(bar.frame);
-    }
+    CGRect frame = self.view.bounds;
+//    UINavigationController *nav = self.navigationController;
+//    UINavigationBar *bar = self.navigationController.navigationBar;
+//    BOOL hidden = bar.hidden;
+//    if (nav && bar && (hidden == NO)) {
+//        frame.size.height = CGRectGetHeight(self.view.frame)-CGRectGetMaxY(bar.frame);
+//    }
     return frame;
 }
 
@@ -91,6 +100,7 @@
  *  xib生成的cell 请使用autolayout
  */
 
+//BasedTableController
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     Class  cellClass = [self cellClassForTable:tableView index:indexPath];
     UITableViewCell *cell = [cellClass dequeueResuableCellWithTableView:tableView];
