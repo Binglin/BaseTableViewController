@@ -23,6 +23,8 @@
 
 //计算cell的高度
 + (CGFloat)heightForItem:(id)object;
+//cell为固定高度
++ (CGFloat)fixHeightForItem:(id)object;
 
 //cell界面设置写在此方法中,这里默认设置数据item到cellItem,子类不调用super方法,则不会设置数据
 - (void)setItem:(id)item;

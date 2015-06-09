@@ -50,3 +50,16 @@
 
 
 
+@interface UITableView (heightCache)
+
+@property (nonatomic, strong)  NSMutableDictionary *heightCache;
+@property (nonatomic, assign)  BOOL needCache;
+
+- (CGFloat)heightForIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
+
+
+
+
