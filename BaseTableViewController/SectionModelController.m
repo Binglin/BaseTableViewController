@@ -45,9 +45,9 @@
 }
 
 - (void)configurationHeader:(UITableViewHeaderFooterView *)header inTable:(UITableView *)table section:(NSInteger)section{
+    [super configurationHeader:header inTable:table section:section];
     header.contentView.backgroundColor = [UIColor redColor];
     BITableViewSectionsData *data = self.dataSources[section];
-    header.frame = ({CGRect frame = header.frame; frame.size.height = data.sectionHeaderHeight;frame;});
     header.textLabel.text  = data.sectionTitle;
 }
 

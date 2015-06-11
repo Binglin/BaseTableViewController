@@ -27,11 +27,13 @@
 }
 
 - (void)configurationHeader:(UIView *)header inTable:(UITableView *)table section:(NSInteger)section{
-    
+    BITableViewSectionsData *sectionData = self.dataSources[section];
+    header.frame = header.frame = ({CGRect frame = header.frame; frame.size.height = sectionData.sectionHeaderHeight;frame;});
 }
 
 - (void)configurationFooter:(UIView *)footer inTable:(UITableView *)table section:(NSInteger)section{
-    
+    BITableViewSectionsData *sectionData = self.dataSources[section];
+    footer.frame = footer.frame = ({CGRect frame = footer.frame; frame.size.height = sectionData.sectionFooterHeight;frame;});
 }
 
 - (UITableViewStyle)customStyleForTable:(UITableView *)tableView{
