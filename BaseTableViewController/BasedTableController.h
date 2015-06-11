@@ -6,33 +6,20 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#pragma mark -
-
+#import "UITableViewCell+data_set.h"
 
 
-#pragma mark -
-@interface BasedTableController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+#pragma mark ~~~~~~~~~~~~~~~~~~~~~~
+#pragma mark - BasedTableController
+@interface BasedTableController : UIViewController
 
 @property (nonatomic, strong)           NSMutableArray  *dataSources;
 @property (nonatomic, strong,readonly)  UITableView     *tableView;
 
-/** cell的class*/
-- (Class) cellClassForTable:(UITableView *)table index:(NSIndexPath *)indexPath;
 
-/**
- *  在view view Controller初始化完成后即注册nib 或者 cell
- *
- *  @param tableView self.tableView已调用此方法
- */
-- (void)registerNibOrClass:(UITableView *)tableView;
-
-/**
- *  基础类未实现，如果子类实现 则表示为多种类cell
- *
- *  @return 所有cell种类数组
- */
-- (NSArray*)cellClassesForTable:(UITableView *)table;
+/**table View Style*/
+#pragma mark - table View Style
+- (UITableViewStyle)customStyleForTable:(UITableView *)tableView;
 
 
 /**
@@ -43,21 +30,13 @@
 - (void)loadMore:(BOOL)more;
 
 - (id)dataAtIndexPath:(NSIndexPath *)indexPath;
-
+- (void)appendDataWith:(NSArray *)datas withMore:(BOOL)more;
 @end
 
 
 
 
 
-@interface UITableView (heightCache)
-
-@property (nonatomic, strong)  NSMutableDictionary *heightCache;
-@property (nonatomic, assign)  BOOL needCache;
-
-- (CGFloat)heightForIndexPath:(NSIndexPath *)indexPath;
-
-@end
 
 
 
