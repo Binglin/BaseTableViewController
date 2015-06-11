@@ -24,6 +24,8 @@
 //计算cell的高度
 //或者某个table有多个自定义cell 且高度不同时 用此方法返回高度，以减少if else之类的判断
 + (CGFloat)heightForItem:(id)object;
+//cell为固定高度
++ (CGFloat)fixHeightForItem:(id)object;
 
 //cell界面设置写在此方法中,这里默认设置数据item到cellItem,子类不调用super方法,则不会设置数据
 - (void)setItem:(id)item;
