@@ -40,4 +40,24 @@
     return UITableViewStyleGrouped;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    BITableViewSectionsData *sectionData = self.dataSources[section];
+    if (sectionData.sectionHeaderView) {
+        return sectionData.sectionHeaderView;
+    }
+    else{
+        return [super tableView:tableView viewForHeaderInSection:section];
+    }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    BITableViewSectionsData *sectionData = self.dataSources[section];
+    if (sectionData.sectionFooterView) {
+        return sectionData.sectionFooterView;
+    }
+    else{
+        return [super tableView:tableView viewForFooterInSection:section];
+    }
+}
+
 @end

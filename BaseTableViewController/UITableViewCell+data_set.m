@@ -41,23 +41,4 @@
     self.textLabel.text = item;
 }
 
-+ (instancetype)dequeueResuableCellWithTableView:(UITableView *)tableView{
-    NSString *cellStr = NSStringFromClass([self class]);
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
-    if (cell == nil) {
-        //xib加载cell
-        if([[NSBundle mainBundle] pathForResource:cellStr ofType:@"nib"] != nil)
-        {
-            UINib *nib = [UINib nibWithNibName:cellStr bundle:nil];
-            [tableView registerNib:nib forCellReuseIdentifier:cellStr];
-            cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
-        }
-        //代码写cell
-        else{
-            [tableView registerClass:[self class] forCellReuseIdentifier:cellStr];
-            cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
-        }
-    }
-    return cell;
-}
 @end

@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSMutableArray *rowDatas;
 @property (nonatomic, strong) UIView    *sectionHeaderView;
+@property (nonatomic, strong) UIView    *sectionFooterView;
 @property (nonatomic, strong) NSString  *sectionTitle;
 @property (nonatomic, assign) CGFloat   sectionHeaderHeight;
 @property (nonatomic, assign) CGFloat   sectionFooterHeight;

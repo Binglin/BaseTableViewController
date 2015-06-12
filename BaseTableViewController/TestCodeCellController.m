@@ -35,7 +35,7 @@ __strong typeof(to_strongify)  self = macro_concat_(to_strongify,__weak);
 
 @interface TestCodeCellController  ()
 {
-    const char *testString;
+//    const char *testString;
 }
 //
 
