@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00FFDE8ABE37195C74C11675 /* libPods-BaseTableViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 033D979910508C360056EDF7 /* libPods-BaseTableViewController.a */; };
 		563054271B04B055006D4B71 /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 563054261B04B055006D4B71 /* UIView+Ext.m */; };
+		5631E6681B2A825900DFDB85 /* UIViewController+tableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5631E6671B2A825900DFDB85 /* UIViewController+tableView.m */; };
 		563315CE1B05F9B60050D7B5 /* TestCodeCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563315CD1B05F9B60050D7B5 /* TestCodeCellController.m */; };
 		563315D11B05F9C50050D7B5 /* TestXibCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563315D01B05F9C50050D7B5 /* TestXibCellController.m */; };
 		563315D51B05FAEF0050D7B5 /* UIViewController+transitionFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 563315D41B05FAEF0050D7B5 /* UIViewController+transitionFunc.m */; };
@@ -17,8 +18,6 @@
 		563315DD1B0602590050D7B5 /* ViewControllerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 563315DC1B0602590050D7B5 /* ViewControllerCell.m */; };
 		5646C5FC1B297A270059A2FF /* SectionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5646C5FB1B297A270059A2FF /* SectionsTableViewController.m */; };
 		5646C5FF1B297BFC0059A2FF /* UIViewController+header_footer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5646C5FE1B297BFC0059A2FF /* UIViewController+header_footer.m */; };
-		5646C6081B297F550059A2FF /* BasedTableController+cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5646C6071B297F550059A2FF /* BasedTableController+cell.m */; };
-		5646C60E1B297FF20059A2FF /* UITableView+height_cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5646C60D1B297FF20059A2FF /* UITableView+height_cache.m */; };
 		5696EA0C1B0598000023AD35 /* UITableViewCell+data_set.m in Sources */ = {isa = PBXBuildFile; fileRef = 5696EA0B1B0598000023AD35 /* UITableViewCell+data_set.m */; };
 		5696EA0F1B05DAB50023AD35 /* BaseButtonTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5696EA0E1B05DAB50023AD35 /* BaseButtonTableCell.m */; };
 		56AC07111B0351AA0008268B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC07101B0351AA0008268B /* main.m */; };
@@ -53,6 +52,9 @@
 		563054251B04B055006D4B71 /* UIView+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ext.h"; sourceTree = "<group>"; };
 		563054261B04B055006D4B71 /* UIView+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ext.m"; sourceTree = "<group>"; };
 		563054281B04B0D8006D4B71 /* basePrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basePrefix.pch; sourceTree = "<group>"; };
+		5631E6661B2A825900DFDB85 /* UIViewController+tableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+tableView.h"; sourceTree = "<group>"; };
+		5631E6671B2A825900DFDB85 /* UIViewController+tableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+tableView.m"; sourceTree = "<group>"; };
+		5631E66C1B2A8B2D00DFDB85 /* VCListExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCListExtension.h; sourceTree = "<group>"; };
 		563315CC1B05F9B60050D7B5 /* TestCodeCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCodeCellController.h; sourceTree = "<group>"; };
 		563315CD1B05F9B60050D7B5 /* TestCodeCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCodeCellController.m; sourceTree = "<group>"; };
 		563315CF1B05F9C50050D7B5 /* TestXibCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestXibCellController.h; sourceTree = "<group>"; };
@@ -67,11 +69,6 @@
 		5646C5FB1B297A270059A2FF /* SectionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionsTableViewController.m; sourceTree = "<group>"; };
 		5646C5FD1B297BFC0059A2FF /* UIViewController+header_footer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+header_footer.h"; sourceTree = "<group>"; };
 		5646C5FE1B297BFC0059A2FF /* UIViewController+header_footer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+header_footer.m"; sourceTree = "<group>"; };
-		5646C6061B297F550059A2FF /* BasedTableController+cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BasedTableController+cell.h"; sourceTree = "<group>"; };
-		5646C6071B297F550059A2FF /* BasedTableController+cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BasedTableController+cell.m"; sourceTree = "<group>"; };
-		5646C60C1B297FF20059A2FF /* UITableView+height_cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+height_cache.h"; sourceTree = "<group>"; };
-		5646C60D1B297FF20059A2FF /* UITableView+height_cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+height_cache.m"; sourceTree = "<group>"; };
-		5646C60F1B2997FA0059A2FF /* BasedTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasedTable.h; sourceTree = "<group>"; };
 		5696EA0A1B0598000023AD35 /* UITableViewCell+data_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+data_set.h"; sourceTree = "<group>"; };
 		5696EA0B1B0598000023AD35 /* UITableViewCell+data_set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+data_set.m"; sourceTree = "<group>"; };
 		5696EA0D1B05DAB50023AD35 /* BaseButtonTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseButtonTableCell.h; sourceTree = "<group>"; };
@@ -221,21 +218,17 @@
 		56B16E631B295DFC00596849 /* BasedTableController */ = {
 			isa = PBXGroup;
 			children = (
-				5646C60F1B2997FA0059A2FF /* BasedTable.h */,
 				5696EA0A1B0598000023AD35 /* UITableViewCell+data_set.h */,
 				5696EA0B1B0598000023AD35 /* UITableViewCell+data_set.m */,
-				56AC07341B0351BC0008268B /* BasedTableController.h */,
-				56AC07351B0351BC0008268B /* BasedTableController.m */,
-				5646C6061B297F550059A2FF /* BasedTableController+cell.h */,
-				5646C6071B297F550059A2FF /* BasedTableController+cell.m */,
+				5631E6661B2A825900DFDB85 /* UIViewController+tableView.h */,
+				5631E6671B2A825900DFDB85 /* UIViewController+tableView.m */,
 				5646C5FD1B297BFC0059A2FF /* UIViewController+header_footer.h */,
 				5646C5FE1B297BFC0059A2FF /* UIViewController+header_footer.m */,
-				5646C60C1B297FF20059A2FF /* UITableView+height_cache.h */,
-				5646C60D1B297FF20059A2FF /* UITableView+height_cache.m */,
 				56B16E6F1B29628200596849 /* SectionsTableViewController.h */,
 				5646C5FB1B297A270059A2FF /* SectionsTableViewController.m */,
 				56B16E6C1B29623000596849 /* BITableViewSectionsData.h */,
 				56B16E6D1B29623000596849 /* BITableViewSectionsData.m */,
+				5631E66C1B2A8B2D00DFDB85 /* VCListExtension.h */,
 			);
 			name = BasedTableController;
 			sourceTree = "<group>";
@@ -298,6 +291,8 @@
 		56B16E761B29637300596849 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				56AC07341B0351BC0008268B /* BasedTableController.h */,
+				56AC07351B0351BC0008268B /* BasedTableController.m */,
 				56AC07151B0351AA0008268B /* ViewController.h */,
 				56AC07161B0351AA0008268B /* ViewController.m */,
 				563315DB1B0602590050D7B5 /* ViewControllerCell.h */,
@@ -465,7 +460,6 @@
 				563315D11B05F9C50050D7B5 /* TestXibCellController.m in Sources */,
 				56AC07391B03532A0008268B /* BaseTableViewCell.m in Sources */,
 				5646C5FC1B297A270059A2FF /* SectionsTableViewController.m in Sources */,
-				5646C6081B297F550059A2FF /* BasedTableController+cell.m in Sources */,
 				56AC073C1B035B1C0008268B /* TestCodeTableViewCell.m in Sources */,
 				56AC07361B0351BC0008268B /* BasedTableController.m in Sources */,
 				56AC07171B0351AA0008268B /* ViewController.m in Sources */,
@@ -478,8 +472,8 @@
 				5696EA0F1B05DAB50023AD35 /* BaseButtonTableCell.m in Sources */,
 				563315D51B05FAEF0050D7B5 /* UIViewController+transitionFunc.m in Sources */,
 				563315D81B05FC260050D7B5 /* TestXibTableViewCell.m in Sources */,
-				5646C60E1B297FF20059A2FF /* UITableView+height_cache.m in Sources */,
 				5696EA0C1B0598000023AD35 /* UITableViewCell+data_set.m in Sources */,
+				5631E6681B2A825900DFDB85 /* UIViewController+tableView.m in Sources */,
 				56AC07111B0351AA0008268B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,7 +17,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.tableView.backgroundColor = [UIColor lightGrayColor];
-//    [self register_headerFooter:self.tableView];
+    [self registerHeaderFooter:self.tableView];
 }
 
 - (void)loadMore:(BOOL)more{
