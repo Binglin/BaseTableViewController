@@ -35,8 +35,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hge-Yo-VLo">
             <objects>
-                <navigationController navigationBarHidden="YES" id="cJQ-1K-rhp" sceneMemberID="viewController">
-                    <nil key="simulatedTopBarMetrics"/>
+                <navigationController id="cJQ-1K-rhp" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CnS-If-bZg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

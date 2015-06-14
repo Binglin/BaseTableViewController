@@ -142,9 +142,6 @@
 			children = (
 				455A33541B2D5B830058F8A3 /* PTNavigationBar.h */,
 				455A33551B2D5B830058F8A3 /* PTNavigationBar.m */,
-				455A33581B2D5C290058F8A3 /* CommonUIEnum.h */,
-				455A336F1B2D67CD0058F8A3 /* CommonUIConsts.h */,
-				455A33701B2D67CD0058F8A3 /* CommonUIConsts.m */,
 			);
 			name = CommonView;
 			sourceTree = "<group>";
@@ -152,8 +149,21 @@
 		455A33571B2D5C020058F8A3 /* enum */ = {
 			isa = PBXGroup;
 			children = (
+				455A33581B2D5C290058F8A3 /* CommonUIEnum.h */,
+				455A336F1B2D67CD0058F8A3 /* CommonUIConsts.h */,
+				455A33701B2D67CD0058F8A3 /* CommonUIConsts.m */,
 			);
 			name = enum;
+			sourceTree = "<group>";
+		};
+		455A33721B2DC3030058F8A3 /* CustomNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				455A334E1B2D56C10058F8A3 /* CommonUIController.h */,
+				455A334F1B2D56C10058F8A3 /* CommonUIController.m */,
+				455A33501B2D56C10058F8A3 /* CommonUIController.xib */,
+			);
+			name = CustomNavigator;
 			sourceTree = "<group>";
 		};
 		563054291B04B0F5006D4B71 /* viewExt */ = {
@@ -172,6 +182,7 @@
 				56B16E721B29634600596849 /* SectionModelController */,
 				56B16E671B295E9200596849 /* testXibCell */,
 				56B16E661B295E8400596849 /* TestCodeCell */,
+				455A33721B2DC3030058F8A3 /* CustomNavigator */,
 			);
 			name = TestGroupClass;
 			sourceTree = "<group>";
@@ -254,6 +265,8 @@
 		56B16E631B295DFC00596849 /* BasedTableController */ = {
 			isa = PBXGroup;
 			children = (
+				56AC07341B0351BC0008268B /* BasedTableController.h */,
+				56AC07351B0351BC0008268B /* BasedTableController.m */,
 				5696EA0A1B0598000023AD35 /* UITableViewCell+data_set.h */,
 				5696EA0B1B0598000023AD35 /* UITableViewCell+data_set.m */,
 				5631E6661B2A825900DFDB85 /* UIViewController+tableView.h */,
@@ -329,15 +342,10 @@
 		56B16E761B29637300596849 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				56AC07341B0351BC0008268B /* BasedTableController.h */,
-				56AC07351B0351BC0008268B /* BasedTableController.m */,
 				56AC07151B0351AA0008268B /* ViewController.h */,
 				56AC07161B0351AA0008268B /* ViewController.m */,
 				563315DB1B0602590050D7B5 /* ViewControllerCell.h */,
 				563315DC1B0602590050D7B5 /* ViewControllerCell.m */,
-				455A334E1B2D56C10058F8A3 /* CommonUIController.h */,
-				455A334F1B2D56C10058F8A3 /* CommonUIController.m */,
-				455A33501B2D56C10058F8A3 /* CommonUIController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";

@@ -25,12 +25,30 @@
     Method swizzledMethod = class_getInstanceMethod(self, @selector(setCommonUITitle:));
     
     method_exchangeImplementations(originalMethod, swizzledMethod);
+    
+    //navigator layout
+    Method original_layout_Method = class_getInstanceMethod(self, @selector(viewWillLayoutSubviews));
+    Method swizzled_layout_Method = class_getInstanceMethod(self, @selector(customViewWillLayout));
+    
+    method_exchangeImplementations(original_layout_Method, swizzled_layout_Method);
+    
+    //navigator layout
+    
 }
 
 - (void)setCommonUITitle:(NSString *)title{
     [self setCommonUITitle:title];
     self.navigatorBar.title = title;
 }
+
+- (void)customViewWillLayout{
+    [self customViewWillLayout];
+    PTNavigationBar * _navigator = objc_getAssociatedObject(self, @selector(navigatorBar));
+    _navigator.frame = ({CGRect frame  = _navigator.frame;
+        frame.size.width = CGRectGetWidth(self.view.frame);
+        frame;});
+}
+
 
 - (BOOL)needNavigatorBar{
     return YES;
@@ -43,6 +61,7 @@
         PTNavigationBar *navigationBar = [[PTNavigationBar alloc] initWithFrame:CGRectMake(0, originY, CGRectGetHeight(self.view.frame), height_top_navigationBar)];
         navigationBar.delegate = (id<PTNavigationBarDelegate>)self;
         self.navigatorBar = navigationBar;
+        id navigator = objc_getAssociatedObject(self, _cmd);
         [self.view addSubview:navigationBar];
         return navigationBar;
     }

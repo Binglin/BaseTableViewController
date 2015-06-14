@@ -45,14 +45,31 @@
 
 - (CGRect)initialframeForTable{
     CGRect frame = [super initialframeForTable];
-    frame.origin.y = CGRectGetMaxY(self.navigatorBar.frame);
-    frame.size.height = frame.size.height - frame.origin.y;
+    if (self.navigatorBar) {
+        self.navigationController.navigationBar.hidden = YES;
+        
+
+    }else{
+        self.navigationController.navigationBar.hidden = NO;
+        frame.origin.y = CGRectGetMaxY(self.navigatorBar.frame);
+        frame.size.height = frame.size.height - frame.origin.y;
+    }
+    
+    [self.view bringSubviewToFront:self.navigatorBar];
     return frame;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor lightGrayColor];
+    if (self.navigatorBar) {
+        self.tableView.contentInset = UIEdgeInsetsMake(CGRectGetMaxY(self.navigatorBar.frame), 0, 0, 0);
+        self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+        if (self.tableView.contentOffset.y < 1.f)
+        {
+            self.tableView.contentOffset = CGPointMake(0, -66);
+        }
+    }
     [self loadMore:NO];
 }
 

@@ -8,6 +8,7 @@
 
 #import "CommonUIController.h"
 #import "PTNavigationBar.h"
+#import "UIViewController+commonUI.h"
 
 @interface CommonUIController ()
 
@@ -17,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.title = @"title";
 }
 
 - (void)didReceiveMemoryWarning {
