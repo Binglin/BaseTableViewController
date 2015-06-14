@@ -33,7 +33,8 @@
 - (void)loadMore:(BOOL)more{
     [self.dataSources addObjectsFromArray:@[@"TestCodeCellController",
                                             @"TestXibCellController",
-                                            @"SectionModelController"]];
+                                            @"SectionModelController",
+                                            @"CommonUIController"]];
     
     
     
