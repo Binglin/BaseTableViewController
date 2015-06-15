@@ -34,6 +34,7 @@
 		56B16E751B29636E00596849 /* SectionModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B16E741B29636E00596849 /* SectionModelController.m */; };
 		56B16E7C1B29746E00596849 /* CustomHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B16E7B1B29746E00596849 /* CustomHeaderFooterView.m */; };
 		56B16E7E1B29747E00596849 /* CustomHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56B16E7D1B29747E00596849 /* CustomHeaderFooterView.xib */; };
+		56DC7B731B2BFE2F006AF4E9 /* CellIdentifierRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DC7B721B2BFE2F006AF4E9 /* CellIdentifierRegisterController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		56B16E7A1B29746E00596849 /* CustomHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeaderFooterView.h; sourceTree = "<group>"; };
 		56B16E7B1B29746E00596849 /* CustomHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHeaderFooterView.m; sourceTree = "<group>"; };
 		56B16E7D1B29747E00596849 /* CustomHeaderFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomHeaderFooterView.xib; sourceTree = "<group>"; };
+		56DC7B711B2BFE2F006AF4E9 /* CellIdentifierRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellIdentifierRegisterController.h; sourceTree = "<group>"; };
+		56DC7B721B2BFE2F006AF4E9 /* CellIdentifierRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellIdentifierRegisterController.m; sourceTree = "<group>"; };
 		F0E93E14BB81B391A6B7992F /* Pods-BaseTableViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTableViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseTableViewController/Pods-BaseTableViewController.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +141,7 @@
 				56B16E721B29634600596849 /* SectionModelController */,
 				56B16E671B295E9200596849 /* testXibCell */,
 				56B16E661B295E8400596849 /* TestCodeCell */,
+				56DC7B701B2BFDFA006AF4E9 /* IdentifierCell */,
 			);
 			name = TestGroupClass;
 			sourceTree = "<group>";
@@ -299,6 +303,15 @@
 				563315DC1B0602590050D7B5 /* ViewControllerCell.m */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		56DC7B701B2BFDFA006AF4E9 /* IdentifierCell */ = {
+			isa = PBXGroup;
+			children = (
+				56DC7B711B2BFE2F006AF4E9 /* CellIdentifierRegisterController.h */,
+				56DC7B721B2BFE2F006AF4E9 /* CellIdentifierRegisterController.m */,
+			);
+			name = IdentifierCell;
 			sourceTree = "<group>";
 		};
 		5E080909303744EFC3F5385D /* Frameworks */ = {
@@ -468,6 +481,7 @@
 				563054271B04B055006D4B71 /* UIView+Ext.m in Sources */,
 				56AC07141B0351AA0008268B /* AppDelegate.m in Sources */,
 				5646C5FF1B297BFC0059A2FF /* UIViewController+header_footer.m in Sources */,
+				56DC7B731B2BFE2F006AF4E9 /* CellIdentifierRegisterController.m in Sources */,
 				56B16E751B29636E00596849 /* SectionModelController.m in Sources */,
 				5696EA0F1B05DAB50023AD35 /* BaseButtonTableCell.m in Sources */,
 				563315D51B05FAEF0050D7B5 /* UIViewController+transitionFunc.m in Sources */,
