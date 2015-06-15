@@ -7,7 +7,6 @@
 //
 
 #import "SectionsTableViewController.h"
-#import "UIViewController+header_footer.h"
 
 
 @implementation SectionsTableViewController

@@ -34,10 +34,8 @@
     [self.dataSources addObjectsFromArray:@[@"TestCodeCellController",
                                             @"TestXibCellController",
                                             @"SectionModelController",
-                                            @"CellIdentifierRegisterController"]];
-    
-    
-    
+                                            @"CellIdentifierRegisterController",
+                                            @"CommonUIController"]];
 }
 
 - (Class)cellClassForTable:(UITableView *)table index:(NSIndexPath *)indexPath{

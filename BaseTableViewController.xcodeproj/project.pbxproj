@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		00FFDE8ABE37195C74C11675 /* libPods-BaseTableViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 033D979910508C360056EDF7 /* libPods-BaseTableViewController.a */; };
+		455A330A1B2D2B430058F8A3 /* UIViewController+commonUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 455A33091B2D2B420058F8A3 /* UIViewController+commonUI.m */; };
+		455A33511B2D56C10058F8A3 /* CommonUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455A334F1B2D56C10058F8A3 /* CommonUIController.m */; };
+		455A33521B2D56C10058F8A3 /* CommonUIController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455A33501B2D56C10058F8A3 /* CommonUIController.xib */; };
+		455A33561B2D5B830058F8A3 /* PTNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 455A33551B2D5B830058F8A3 /* PTNavigationBar.m */; };
+		455A33711B2D67CD0058F8A3 /* CommonUIConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 455A33701B2D67CD0058F8A3 /* CommonUIConsts.m */; };
 		563054271B04B055006D4B71 /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 563054261B04B055006D4B71 /* UIView+Ext.m */; };
 		5631E6681B2A825900DFDB85 /* UIViewController+tableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5631E6671B2A825900DFDB85 /* UIViewController+tableView.m */; };
 		563315CE1B05F9B60050D7B5 /* TestCodeCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563315CD1B05F9B60050D7B5 /* TestCodeCellController.m */; };
@@ -50,6 +55,16 @@
 /* Begin PBXFileReference section */
 		0211A23E059654EB98196213 /* Pods-BaseTableViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTableViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseTableViewController/Pods-BaseTableViewController.release.xcconfig"; sourceTree = "<group>"; };
 		033D979910508C360056EDF7 /* libPods-BaseTableViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseTableViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		455A33081B2D2B420058F8A3 /* UIViewController+commonUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+commonUI.h"; sourceTree = "<group>"; };
+		455A33091B2D2B420058F8A3 /* UIViewController+commonUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+commonUI.m"; sourceTree = "<group>"; };
+		455A334E1B2D56C10058F8A3 /* CommonUIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUIController.h; sourceTree = "<group>"; };
+		455A334F1B2D56C10058F8A3 /* CommonUIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUIController.m; sourceTree = "<group>"; };
+		455A33501B2D56C10058F8A3 /* CommonUIController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonUIController.xib; sourceTree = "<group>"; };
+		455A33541B2D5B830058F8A3 /* PTNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNavigationBar.h; sourceTree = "<group>"; };
+		455A33551B2D5B830058F8A3 /* PTNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNavigationBar.m; sourceTree = "<group>"; };
+		455A33581B2D5C290058F8A3 /* CommonUIEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUIEnum.h; sourceTree = "<group>"; };
+		455A336F1B2D67CD0058F8A3 /* CommonUIConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUIConsts.h; sourceTree = "<group>"; };
+		455A33701B2D67CD0058F8A3 /* CommonUIConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUIConsts.m; sourceTree = "<group>"; };
 		563054251B04B055006D4B71 /* UIView+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ext.h"; sourceTree = "<group>"; };
 		563054261B04B055006D4B71 /* UIView+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ext.m"; sourceTree = "<group>"; };
 		563054281B04B0D8006D4B71 /* basePrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basePrefix.pch; sourceTree = "<group>"; };
@@ -125,6 +140,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		455A33531B2D5B5A0058F8A3 /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				455A33541B2D5B830058F8A3 /* PTNavigationBar.h */,
+				455A33551B2D5B830058F8A3 /* PTNavigationBar.m */,
+			);
+			name = CommonView;
+			sourceTree = "<group>";
+		};
+		455A33571B2D5C020058F8A3 /* enum */ = {
+			isa = PBXGroup;
+			children = (
+				455A33581B2D5C290058F8A3 /* CommonUIEnum.h */,
+				455A336F1B2D67CD0058F8A3 /* CommonUIConsts.h */,
+				455A33701B2D67CD0058F8A3 /* CommonUIConsts.m */,
+			);
+			name = enum;
+			sourceTree = "<group>";
+		};
+		455A33721B2DC3030058F8A3 /* CustomNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				455A334E1B2D56C10058F8A3 /* CommonUIController.h */,
+				455A334F1B2D56C10058F8A3 /* CommonUIController.m */,
+				455A33501B2D56C10058F8A3 /* CommonUIController.xib */,
+			);
+			name = CustomNavigator;
+			sourceTree = "<group>";
+		};
 		563054291B04B0F5006D4B71 /* viewExt */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +186,7 @@
 				56B16E671B295E9200596849 /* testXibCell */,
 				56B16E661B295E8400596849 /* TestCodeCell */,
 				56DC7B701B2BFDFA006AF4E9 /* IdentifierCell */,
+				455A33721B2DC3030058F8A3 /* CustomNavigator */,
 			);
 			name = TestGroupClass;
 			sourceTree = "<group>";
@@ -212,6 +257,8 @@
 		56AC073D1B035C310008268B /* base */ = {
 			isa = PBXGroup;
 			children = (
+				455A33571B2D5C020058F8A3 /* enum */,
+				455A33531B2D5B5A0058F8A3 /* CommonView */,
 				56B16E651B295E3600596849 /* BaseTableViewCell */,
 				56B16E641B295E1000596849 /* controller_category */,
 				56B16E631B295DFC00596849 /* BasedTableController */,
@@ -222,6 +269,8 @@
 		56B16E631B295DFC00596849 /* BasedTableController */ = {
 			isa = PBXGroup;
 			children = (
+				56AC07341B0351BC0008268B /* BasedTableController.h */,
+				56AC07351B0351BC0008268B /* BasedTableController.m */,
 				5696EA0A1B0598000023AD35 /* UITableViewCell+data_set.h */,
 				5696EA0B1B0598000023AD35 /* UITableViewCell+data_set.m */,
 				5631E6661B2A825900DFDB85 /* UIViewController+tableView.h */,
@@ -242,6 +291,8 @@
 			children = (
 				563315D31B05FAEF0050D7B5 /* UIViewController+transitionFunc.h */,
 				563315D41B05FAEF0050D7B5 /* UIViewController+transitionFunc.m */,
+				455A33081B2D2B420058F8A3 /* UIViewController+commonUI.h */,
+				455A33091B2D2B420058F8A3 /* UIViewController+commonUI.m */,
 			);
 			name = controller_category;
 			sourceTree = "<group>";
@@ -295,8 +346,6 @@
 		56B16E761B29637300596849 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				56AC07341B0351BC0008268B /* BasedTableController.h */,
-				56AC07351B0351BC0008268B /* BasedTableController.m */,
 				56AC07151B0351AA0008268B /* ViewController.h */,
 				56AC07161B0351AA0008268B /* ViewController.m */,
 				563315DB1B0602590050D7B5 /* ViewControllerCell.h */,
@@ -417,6 +466,7 @@
 				56AC071A1B0351AA0008268B /* Main.storyboard in Resources */,
 				56AC071F1B0351AA0008268B /* LaunchScreen.xib in Resources */,
 				56AC071C1B0351AA0008268B /* Images.xcassets in Resources */,
+				455A33521B2D56C10058F8A3 /* CommonUIController.xib in Resources */,
 				563315DA1B05FC3D0050D7B5 /* TestXibTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,13 +522,16 @@
 				563315CE1B05F9B60050D7B5 /* TestCodeCellController.m in Sources */,
 				563315D11B05F9C50050D7B5 /* TestXibCellController.m in Sources */,
 				56AC07391B03532A0008268B /* BaseTableViewCell.m in Sources */,
+				455A33561B2D5B830058F8A3 /* PTNavigationBar.m in Sources */,
 				5646C5FC1B297A270059A2FF /* SectionsTableViewController.m in Sources */,
 				56AC073C1B035B1C0008268B /* TestCodeTableViewCell.m in Sources */,
 				56AC07361B0351BC0008268B /* BasedTableController.m in Sources */,
+				455A330A1B2D2B430058F8A3 /* UIViewController+commonUI.m in Sources */,
 				56AC07171B0351AA0008268B /* ViewController.m in Sources */,
 				56B16E7C1B29746E00596849 /* CustomHeaderFooterView.m in Sources */,
 				56B16E6E1B29623000596849 /* BITableViewSectionsData.m in Sources */,
 				563054271B04B055006D4B71 /* UIView+Ext.m in Sources */,
+				455A33511B2D56C10058F8A3 /* CommonUIController.m in Sources */,
 				56AC07141B0351AA0008268B /* AppDelegate.m in Sources */,
 				5646C5FF1B297BFC0059A2FF /* UIViewController+header_footer.m in Sources */,
 				56DC7B731B2BFE2F006AF4E9 /* CellIdentifierRegisterController.m in Sources */,
@@ -488,6 +541,7 @@
 				563315D81B05FC260050D7B5 /* TestXibTableViewCell.m in Sources */,
 				5696EA0C1B0598000023AD35 /* UITableViewCell+data_set.m in Sources */,
 				5631E6681B2A825900DFDB85 /* UIViewController+tableView.m in Sources */,
+				455A33711B2D67CD0058F8A3 /* CommonUIConsts.m in Sources */,
 				56AC07111B0351AA0008268B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
