@@ -133,7 +133,10 @@
 
 #pragma mark data
 - (id)dataAtIndexPath:(NSIndexPath *)indexPath{
-    return self.dataSources[indexPath.row];
+    if (indexPath.row < self.dataSources.count) {
+        return self.dataSources[indexPath.row];
+    }
+    return nil;
 }
 
 - (void)appendDataWith:(NSArray *)datas withMore:(BOOL)more{
@@ -183,7 +186,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     Class  cellClass = [self cellClassForTable:tableView index:indexPath];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([cellClass class])];
-    [cell setItem:[self dataAtIndexPath:indexPath]];
+    @try {
+        [cell setItem:[self dataAtIndexPath:indexPath]];
+    }
+    @catch (NSException *exception) {    }
+    @finally {    }
     
     return cell;
 }
@@ -283,6 +290,31 @@
 
 - (NSArray *)cellClassesForTable:(UITableView *)table{
     return nil;
+}
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#pragma mark  cell  Identifier or nib register
+- (void)register_cellIdentifiers:(UITableView *)tableView{
+    NSArray *cellIdentifier = [self cellsIdentifiersForTable:tableView];
+    for (id identi in cellIdentifier) {
+        if ([identi isKindOfClass:[NSString class]]) {
+            [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:identi];
+        }else if ([identi isKindOfClass:[UITableViewCell class]]){
+            [self registerCell:identi InTableView:tableView];
+        }
+    }
+}
+
+/***  @return NSString or Class*/
+- (id)cellIdentifierForTableView:(UITableView *)table index:(NSIndexPath *)indexPath{
+    return @"UITableViewCell";
+}
+
+- (NSArray *)cellsIdentifiersForTable:(UITableView *)tableView{
+    return @[@"UITableViewCell"];
 }
 
 

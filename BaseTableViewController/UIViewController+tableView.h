@@ -79,24 +79,36 @@
 
 #pragma mark  cell  class or nib register
 
-/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/**
  *  cell的class
- *  default is UITableViewCell for cellClass  and UITableHeaderFooterView for headerFooterClass
+ *  default is UITableViewCell for cellClass
  */
 - (Class) cellClassForTable:(UITableView *)table index:(NSIndexPath *)indexPath;
 
-/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/**
  *  在view view Controller初始化完成后即注册nib 或者 cell Nib Or Class
  *  @param tableView self.tableView已调用此方法
  */
 - (void)register_cell:(UITableView *)tableView;
 
-/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/**
  *  基础类未实现，如果子类实现 则表示为多种类cell
  *  @return 所有cell种类数组
  */
 - (NSArray*)cellClassesForTable:(UITableView *)tableView;
 
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#pragma mark  cell  Identifier or nib register
+- (void)register_cellIdentifiers:(UITableView *)tableView;
+
+/***  @return NSString or Class*/
+- (id)cell_classORidentifierForTableView:(UITableView *)table index:(NSIndexPath *)indexPath;
+
+/**   @return 如果是自定义cell 则返回该cell的class 如果为string则默认UITableViewCell*/
+- (NSArray *)cellsIdentifiersForTable:(UITableView *)tableView;
 
 @end
 #pragma mark -

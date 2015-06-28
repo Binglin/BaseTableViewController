@@ -35,6 +35,7 @@
         BITableViewSectionsData *sectionData = [BITableViewSectionsData sectionWithRowDatas:rowArr];
         sectionData.sectionTitle = [NSString stringWithFormat:@"section = %d",section];
         sectionData.sectionHeaderHeight = 40.f;
+        sectionData.sectionFooterHeight = 20.f;
         [sectionDatas addObject:sectionData];
     }
     return sectionDatas;
@@ -51,8 +52,16 @@
     header.textLabel.text  = data.sectionTitle;
 }
 
+- (void)configurationFooter:(UITableViewHeaderFooterView *)footer inTable:(UITableView *)table section:(NSInteger)section{
+    footer.contentView.backgroundColor = [UIColor clearColor];
+}
+
 - (Class)headerFooterClassForTable:(UITableView *)table inSection:(NSInteger)section type:(TableHeaderFooterType)headerOrFooter{
     return [UITableViewHeaderFooterView class];
+}
+
+- (UITableViewStyle)customStyleForTable:(UITableView *)tableView{
+    return UITableViewStyleGrouped;
 }
 
 
