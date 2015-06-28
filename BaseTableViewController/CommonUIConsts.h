@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-extern CGFloat const height_top_navigationBar ;
+extern float const height_top_navigationBar ;
 
 
 #ifndef BaseTableViewController_CommonConsts_h
