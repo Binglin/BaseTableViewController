@@ -11,6 +11,5 @@
 
 @interface SectionsTableViewController : BasedTableController<UITableViewDelegate>
 
-//@property (nonatomic, strong) NSMutableArray<BITableViewSectionsData>  *dataSources;
 
 @end
