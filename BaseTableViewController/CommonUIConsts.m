@@ -9,4 +9,4 @@
 #import "CommonUIConsts.h"
 
 
-CGFloat const height_top_navigationBar = 44;
+float const height_top_navigationBar = 44;

@@ -52,12 +52,12 @@
 //计算tableView的frame
 - (CGRect)initialframeForTable{
     CGRect frame = self.view.bounds;
-//    UINavigationController *nav = self.navigationController;
-//    UINavigationBar *bar = self.navigationController.navigationBar;
-//    BOOL hidden = bar.hidden;
-//    if (nav && bar && (hidden == NO)) {
-//        frame.size.height = CGRectGetHeight(self.view.frame)-CGRectGetMaxY(bar.frame);
-//    }
+    UINavigationController *nav = self.navigationController;
+    UINavigationBar *bar = self.navigationController.navigationBar;
+    BOOL hidden = bar.hidden;
+    if (nav && bar && (hidden == NO)) {
+        frame.size.height = CGRectGetHeight(self.view.frame)-CGRectGetMaxY(bar.frame);
+    }
     return frame;
 }
 
